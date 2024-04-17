@@ -65,23 +65,11 @@ class Television():
     
     
     
-    #Getters
-    def get_power(self):
-        return self.powered
-    
-    def get_volume(self):
-        if(self.muted == True):
-            return 0
-        return self.volume
-    
-    def get_channel(self):
-        return self.channel
-    
-    
-    
     def __str__(self):
-        
-        return f"Power = {self.get_power()}, Channel = {self.get_channel()}, Volume = {self.get_volume()}, Muted: {self.muted}"
+        if (self.muted == True):
+            return f"Power = {self.powered}, Channel = {self.channel}, Volume = {0}"
+        else:
+            return f"Power = {self.powered}, Channel = {self.channel}, Volume = {self.volume}"
 
 
 
