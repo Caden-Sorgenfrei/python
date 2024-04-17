@@ -9,19 +9,19 @@ class Television():
     MAX_CHANNEL = 3
 
     def __init__ (self):
-        
         self.powered = False
         self.muted = False
         self.volume = 0
         self.channel = 0
 
+    #Toggle power state of the TV
     def power(self):
         if(self.powered == True):
             self.powered = False
         elif (self.powered == False):
             self.powered = True
         
-    
+    #Toggle Mute state of the TV
     def mute(self):
         if(self.powered == True):
             if(self.muted == True):
@@ -82,4 +82,7 @@ class Television():
     def __str__(self):
         
         return f"Power = {self.get_power()}, Channel = {self.get_channel()}, Volume = {self.get_volume()}, Muted: {self.muted}"
+
+
+
 
