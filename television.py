@@ -11,8 +11,8 @@ class Television():
     def __init__ (self):
         self.powered = False
         self.muted = False
-        self.volume = 0
-        self.channel = 0
+        self.volume = Television.MIN_VOLUME
+        self.channel = Television.MIN_CHANNEL
 
     #Toggle power state of the TV
     def power(self):
